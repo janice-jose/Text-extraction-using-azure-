@@ -11,10 +11,10 @@ from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 load_dotenv()
 
-subscription_key = os.getenv('subscription_key')
-endpoint = os.getenv('endpoint')
+subscription_key = 'e6c9a0e3fa204233b14c914fded35683' #os.getenv('subscription_key')
+endpoint = 'https://cloudminiprojocr.cognitiveservices.azure.com/'#os.getenv('endpoint')
 computervision_client = ComputerVisionClient(endpoint,CognitiveServicesCredentials(subscription_key))
-
+LOCATION='East US'
 dirname = os.path.dirname(__file__)
 
 def read_local(read):
